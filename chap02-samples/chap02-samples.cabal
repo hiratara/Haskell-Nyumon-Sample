@@ -1,0 +1,218 @@
+name:                chap02-samples
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable chap02-samples-2-3-1-do
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-3-1-do.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-3-1-let
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-3-1-let.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-3-1-toplevel
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-3-1-toplevel.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-3-1-toplevel-2
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-3-1-toplevel-2.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-3-1-where
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-3-1-where.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-3-1-where-2
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-3-1-where-2.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-3-1-where-3
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-3-1-where-3.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-4-3
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-4-3.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-5-io
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-5-io.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-5-main
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-5-main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-5-sample1
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-5-sample1.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+-- doを使っていないために構文エラーとなっている例
+-- executable chap02-samples-2-5-sample2
+--   hs-source-dirs:      .
+--   main-is:             chap02-samples-2-5-sample2.hs
+--   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+--   build-depends:       base
+--   default-language:    Haskell2010
+
+executable chap02-samples-2-5-sample3
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-5-sample3.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-2-as
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-2-as.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-2-case
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-2-case.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-2-constractor
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-2-constractor.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-2-irrefutable
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-2-irrefutable.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-2-var
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-2-var.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-2-wildcard
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-2-wildcard.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-2-wildcard-2
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-2-wildcard-2.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-3
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-3.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-4-func
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-4-func.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-6-4-var
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-6-4-var.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-7-3
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-7-3.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-7-4
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-7-4.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-8-1-fizz-buzz
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-8-1-fizz-buzz.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-8-2-fizz-buzz
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-8-2-fizz-buzz.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-8-2-fizz-buzz-forM_
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-8-2-fizz-buzz-forM_.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-9-1-myapp
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-9-1-myapp.hs
+  other-modules:       Params
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+
+executable chap02-samples-2-9-1-myapp-2
+  hs-source-dirs:      .
+  main-is:             chap02-samples-2-9-1-myapp-2.hs
+  other-modules:       MyApp.SomeModule
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+  default-language:    Haskell2010
+

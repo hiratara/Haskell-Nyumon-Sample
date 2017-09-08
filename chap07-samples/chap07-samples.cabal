@@ -1,0 +1,204 @@
+name:                chap07-samples
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable chap07-samples-7-3-1
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-3-1.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-4-1
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-4-1.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , vector
+  default-language:    Haskell2010
+
+executable chap07-samples-7-4-2
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-4-2.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , vector
+  default-language:    Haskell2010
+
+executable chap07-samples-7-4-2-column
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-4-2-column.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , vector
+  default-language:    Haskell2010
+
+executable chap07-samples-7-4-3
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-4-3.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , vector
+  default-language:    Haskell2010
+
+executable chap07-samples-7-5-1
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-5-1.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , split
+  default-language:    Haskell2010
+
+executable chap07-samples-7-5-2
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-5-2.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , attoparsec
+  default-language:    Haskell2010
+
+executable chap07-samples-7-5-2-monad
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-5-2-monad.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , attoparsec
+  default-language:    Haskell2010
+
+executable chap07-samples-7-5-3
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-5-3.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , attoparsec
+  default-language:    Haskell2010
+
+executable chap07-samples-7-5-4
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-5-4.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , attoparsec
+  default-language:    Haskell2010
+
+executable chap07-samples-7-5-5
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-5-5.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , attoparsec
+  default-language:    Haskell2010
+
+executable chap07-samples-7-6-1
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-6-1.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-6-1-list-tuple
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-6-1-list-tuple.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-6-1-complex
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-6-1-complex.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-6-2
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-6-2.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-6-3
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-6-3.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-6-3-manual
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-6-3-manual.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-6-3-generics
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-6-3-generics.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , aeson
+                     , bytestring
+  default-language:    Haskell2010
+
+executable chap07-samples-7-7-1
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-7-1.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , time
+  default-language:    Haskell2010
+
+executable chap07-samples-7-7-2
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-7-2.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , time
+  default-language:    Haskell2010
+
+executable chap07-samples-7-8-3
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-8-3.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , lens
+  default-language:    Haskell2010
+
+executable chap07-samples-7-9
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-9.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , mtl
+                     , operational
+  default-language:    Haskell2010
+
+executable chap07-samples-7-10-2
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-10-2.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , pipes
+  default-language:    Haskell2010
+
+executable chap07-samples-7-10-3
+  hs-source-dirs:      .
+  main-is:             chap07-samples-7-10-3.hs
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , pipes
+  default-language:    Haskell2010

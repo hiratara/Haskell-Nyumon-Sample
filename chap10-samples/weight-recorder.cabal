@@ -1,0 +1,84 @@
+name:                weight-recorder
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/weight-recorder#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2017 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+data-files:          templates/start.mustache
+                   , templates/main.mustache
+                   , data/schema.sql
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Entity.WeightRecord
+                     , Entity.User
+                     , Model.User
+                     , Model.WeightRecord
+                     , Web.Action.Register
+                     , Web.Action.Login
+                     , Web.Action.NewRecord
+                     , Web.Core
+                     , Web.WeightRecorder
+                     , Web.View.Main
+                     , Web.View.Start
+                     -- to run md-rerun-repl
+                     -- , Paths_weight_recorder
+  build-depends:       base >= 4.7 && < 5
+                     , bcrypt
+                     , bytestring
+                     , filepath
+                     , HDBC
+                     , HDBC-sqlite3
+                     , http-types
+                     , Spock
+                     , mustache
+                     , persistable-record
+                     , relational-query-HDBC
+                     , relational-query
+                     , resource-pool
+                     , text
+                     , time
+                     , transformers
+                     , wai
+  ghc-options:         -Wall
+  default-language:    Haskell2010
+
+executable weight-recorder
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  other-modules:       Paths_weight_recorder
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , filepath
+                     , optparse-applicative
+                     , weight-recorder
+
+test-suite weight-recorder-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             test.hs
+  other-modules:       Paths_weight_recorder
+  build-depends:       base
+                     , bytestring
+                     , directory
+                     , filepath
+                     , http-types
+                     , HUnit
+                     , temporary
+                     , utf8-string
+                     , wai
+                     , wai-extra
+                     , weight-recorder
+                     , process
+                     , Spock
+  ghc-options:         -Wall
+  default-language:    Haskell2010

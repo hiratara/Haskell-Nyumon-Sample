@@ -1,0 +1,14 @@
+resolver: lts-8.24
+packages:
+- chap01-samples
+- chap02-samples
+- chap03-samples
+- chap04-samples
+- chap05-samples
+- chap07-samples
+- chap08-samples
+- chap09-samples
+- chap10-samples
+- chap11-samples
+extra-deps:
+- HDBC-sqlite3-2.3.3.1

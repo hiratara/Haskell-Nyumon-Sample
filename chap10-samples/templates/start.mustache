@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weight Recorder</title>
+</head>
+
+<body>
+
+{{#message}}
+<div style="background-color: red">{{message}}</div>
+{{/message}}
+
+<h2>ユーザ登録</h2>
+
+<form method="POST" action="/register">
+  <ul>
+  <li>アカウント名 <input type="text" name="name" /></li>
+  <li>パスワード <input type="text" name="password" /></li>
+  </ul>
+  <input type="submit" value="登録" />
+</form>
+
+<h2>ログイン</h2>
+
+<form method="POST" action="/login">
+  <ul>
+  <li>アカウント名 <input type="text" name="name" /></li>
+  <li>パスワード <input type="text" name="password" /></li>
+  </ul>
+  <input type="submit" value="ログイン" />
+</form>
+
+</body>
+
+</html>

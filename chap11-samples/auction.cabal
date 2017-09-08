@@ -1,0 +1,71 @@
+name:                auction
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Auction.Types
+                     , Auction.Server
+                     , Auction.Client
+                     , Supervisor
+                     , Logger
+  build-depends:       base >= 4.7 && < 5, random
+                     , async, safe-exceptions, stm
+                     , transformers, mtl, lens, lens-aeson
+                     , aeson, text, time
+                     , containers, bytestring, http-types, uuid
+                     , unordered-containers, hashable
+                     , wreq, scotty
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+executable auction-server
+  hs-source-dirs:      app
+  main-is:             server.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:       base, auction
+                     , async, stm, text, safe-exceptions
+  default-language:    Haskell2010
+
+executable auction-client
+  hs-source-dirs:      app
+  main-is:             client.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:       base, auction
+                     , time
+                     , lens, transformers, mtl
+                     , safe-exceptions, exceptions, safe
+                     , haskeline
+  default-language:    Haskell2010
+
+executable bidder-bot
+  hs-source-dirs:      app
+  main-is:             bidder-bot.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:       base, auction, lens
+  default-language:    Haskell2010
+
+executable counter-system
+  hs-source-dirs:      app
+  main-is:             counter.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall
+  build-depends:       base, aeson, wreq, lens
+                     , stm, scotty, http-types, safe-exceptions
+  default-language:    Haskell2010
+
+--test-suite senario
+--  type:                exitcode-stdio-1.0
+--  hs-source-dirs:      test
+--  main-is:             senario.hs
+--  build-depends:       base, auction
+--                     , text, random, time
+--                     , async, lens, stm
+--                     , safe-exceptions
+--  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+--  default-language:    Haskell2010
+

@@ -20,6 +20,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Entity.WeightRecord
                      , Entity.User
+                     , Entity.TH
                      , Model.User
                      , Model.WeightRecord
                      , Web.Action.Register
@@ -44,6 +45,8 @@ library
                      , relational-query-HDBC
                      , relational-query
                      , resource-pool
+                     , safe-exceptions
+                     , template-haskell
                      , text
                      , time
                      , transformers

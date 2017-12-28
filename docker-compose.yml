@@ -1,0 +1,18 @@
+version: '3'
+services:
+  weight-recorder:
+    build: .
+    volumes:
+      - stack:/home/weight/.stack
+      - .:/work
+      - stack-work:/work/.stack-work
+      - chap10-stack-work:/work/chap10-samples/.stack-work
+      - data:/data
+    ports:
+      - "8080:8080"
+
+volumes:
+  stack:
+  stack-work:
+  chap10-stack-work:
+  data:

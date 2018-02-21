@@ -197,7 +197,6 @@ deriveJSON defaultOptions ''NewUser
 deriveJSON defaultOptions ''User
 deriveJSON defaultOptions ''Inventory
 deriveJSON defaultOptions ''UserId
-deriveJSON defaultOptions ''UUID
 
 deriveJSON defaultOptions ''AuctionRequest
 deriveJSON defaultOptions ''AuctionResponse

@@ -41,6 +41,7 @@ library
                      , Spock
                      , mustache
                      , persistable-record
+                     , product-isomorphic
                      , relational-query-HDBC
                      , relational-query
                      , resource-pool

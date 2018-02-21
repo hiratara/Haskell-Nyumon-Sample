@@ -1,4 +1,4 @@
-{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, TemplateHaskell #-}
+{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, TemplateHaskell, DataKinds, DeriveGeneric #-}
 
 module Model.WeightRecord
      ( NewWRecord(NewWRecord, nwrUserId, nwrTime, nwrWeight)
@@ -11,25 +11,27 @@ module Model.WeightRecord
   where
 
 import           Control.Exception         (catch)
+import           Data.Functor.ProductIsomorphic as DFP
 import qualified Data.Time.LocalTime       as TM
 import           Database.HDBC
     ( IConnection
     , SqlError
     , withTransaction
     )
-import           Database.HDBC.Query.TH    (makeRecordPersistableDefault)
+import           Database.HDBC.Query.TH    (makeRelationalRecord)
 import qualified Database.HDBC.Record      as DHR
-import qualified Database.Relational.Query as HRR
+import qualified Database.Relational       as HRR
 import qualified Entity.WeightRecord       as WRecord
+import           GHC.Generics              (Generic)
 import           System.IO                 (hPrint, stderr)
 
 data NewWRecord = NewWRecord
     { nwrUserId :: !Int
     , nwrTime   :: !TM.LocalTime
     , nwrWeight :: !Double
-    }
+    } deriving (Generic)
 
-makeRecordPersistableDefault ''NewWRecord
+makeRelationalRecord ''NewWRecord
 
 insertNewWRecord
   :: IConnection c
@@ -45,7 +47,7 @@ insertNewWRecord wr conn = do
 
 piNewWRecord :: HRR.Pi WRecord.WeightRecord NewWRecord
 piNewWRecord =
-  NewWRecord HRR.|$| WRecord.userId' HRR.|*| WRecord.time' HRR.|*|
+  NewWRecord DFP.|$| WRecord.userId' DFP.|*| WRecord.time' DFP.|*|
   WRecord.weight'
 
 selectWRecord

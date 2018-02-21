@@ -1,4 +1,4 @@
-{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, TemplateHaskell #-}
+{-# LANGUAGE FlexibleInstances, MultiParamTypeClasses, TemplateHaskell, DataKinds, DeriveGeneric #-}
 
 module Model.User
      ( NewUser(NewUser, nuName, nuPassword)
@@ -16,6 +16,7 @@ import           Crypto.BCrypt
     , validatePassword
     )
 import qualified Data.ByteString           as BS
+import           Data.Functor.ProductIsomorphic as DFP
 import           Data.Text                 (pack, unpack)
 import           Data.Text.Encoding        (decodeUtf8, encodeUtf8)
 import           Database.HDBC
@@ -23,22 +24,23 @@ import           Database.HDBC
     , SqlError
     , withTransaction
     )
-import           Database.HDBC.Query.TH    (makeRecordPersistableDefault)
+import           Database.HDBC.Query.TH    (makeRelationalRecord)
 import qualified Database.HDBC.Record      as DHR
-import qualified Database.Relational.Query as HRR
+import qualified Database.Relational       as HRR
 import qualified Entity.User               as User
+import           GHC.Generics              (Generic)
 import           System.IO                 (hPrint, hPutStrLn, stderr)
 
 data NewUser = NewUser
   { nuName     :: !String
   , nuPassword :: !String
-  }
+  } deriving (Generic)
 
-makeRecordPersistableDefault ''NewUser
+makeRelationalRecord ''NewUser
 
 -- 射影を定義。
 piNewUser :: HRR.Pi User.User NewUser
-piNewUser = NewUser HRR.|$| User.name' HRR.|*| User.password'
+piNewUser = NewUser DFP.|$| User.name' DFP.|*| User.password'
 
 -- src/Model/User.hsに追記。
 -- 第一引数で新ユーザ、第二引数で接続を指定。

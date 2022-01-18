@@ -1,4 +1,4 @@
-resolver: lts-12.0
+resolver: lts-18.22
 packages:
 - chap01-samples
 - chap02-samples
@@ -12,6 +12,8 @@ packages:
 - chap11-samples
 extra-deps:
 - HDBC-sqlite3-2.3.3.1
-- reroute-0.5.0.0
-- Spock-0.13.0.0
-- Spock-core-0.13.0.0
+- reroute-0.6.0.0
+- Spock-0.14.0.0
+- Spock-core-0.14.0.0
+- stm-containers-1.2
+- stm-hamt-1.2.0.6

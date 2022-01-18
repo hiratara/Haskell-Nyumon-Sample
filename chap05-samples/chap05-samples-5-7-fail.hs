@@ -3,11 +3,12 @@ module Main(main) where
 
 import System.IO.Error (tryIOError)
 
-monadHead, monadHead' :: Monad m => [a] -> m a
+monadHead :: (Monad m, MonadFail m) => [a] -> m a
 monadHead xs = do
   (x:_) <- return xs
   return x
 
+monadHead' :: (Monad m) => [a] -> m a
 monadHead' xs = do
   let (x:_) = xs
   return x

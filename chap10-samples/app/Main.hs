@@ -1,7 +1,6 @@
 -- app/Main.hs
 module Main (main) where
 
-import Data.Monoid ((<>))
 import Options.Applicative
     ( Parser
     , auto

@@ -4,17 +4,15 @@ module Main where
 import qualified Prelude (putStrLn, putStr, print)
 import Prelude hiding (putStrLn, putStr, print)
 import System.Console.Haskeline (InputT, runInputT, defaultSettings, getInputLine)
-import qualified System.Console.Haskeline.MonadException as Haskeline (catch)
 import Text.Read (readMaybe)
 import Control.Monad (forM_, when)
 import Control.Monad.IO.Class (MonadIO, liftIO)
 import Control.Monad.Trans.Class (lift)
 import Control.Monad.Trans.Maybe (MaybeT(..), maybeToExceptT)
 import Control.Monad.Trans.Except (ExceptT(..), runExceptT, throwE)
-import qualified Control.Monad.Catch as Catch (MonadThrow(..), MonadCatch(..))
-import Control.Exception.Safe (Exception, SomeException, throwIO, catch, isSyncException)
+import Control.Exception.Safe (Exception, SomeException, catch)
 import Control.Lens ((^.))
-import Data.List (findIndex, splitAt, dropWhile, isPrefixOf)
+import Data.List (findIndex,isPrefixOf)
 import Safe (atMay)
 import Data.Time.Clock (getCurrentTime, addUTCTime)
 import Data.String (IsString)
@@ -22,15 +20,6 @@ import Auction.Types
 import Auction.Client
 
 --------------------------------------------------------------------------------
-
--- FIXME: 2 orphan instances
-instance Catch.MonadThrow (InputT IO) where
-    throwM e = liftIO $ throwIO e
-instance Catch.MonadCatch (InputT IO) where
-    catch act handler = Haskeline.catch act $ \e ->
-        if isSyncException e
-            then handler e
-            else throwIO e
 
 -- クライアントのモナド定義
 type AuctionClient = AuctionSessionT (InputT IO)

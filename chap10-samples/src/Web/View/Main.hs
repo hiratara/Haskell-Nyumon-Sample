@@ -6,6 +6,7 @@ module Web.View.Main (loadMainTemplate, mainView) where
 import           Control.Monad.IO.Class (liftIO)
 import           Data.Function          (on)
 import           Data.List              (groupBy, sortBy)
+import           Data.Maybe             (fromJust)
 import qualified Data.Text              as TXT
 import qualified Data.Time.Format       as TM
 import qualified Data.Time.LocalTime    as TM
@@ -76,7 +77,7 @@ weightGraphValue wrs = do
 -- メッセージを受け取って
 mainView :: Maybe TXT.Text -> WRAction a
 mainView mMes = do
-    Just user <- wrconUser <$> getContext
+    user <- fromJust . wrconUser <$> getContext
     uv <- userValue user -- ユーザ情報
     rs <- runSqlite $ selectWRecord (User.id user) -- SQLiteの情報
     rvs <- mapM weightRecordValue rs
